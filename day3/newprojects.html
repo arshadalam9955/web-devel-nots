@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunion Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url(https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg) no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #333333;
+        }
+
+        p {
+            color: #666666;
+            margin: 10px 0;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        span {
+            color: red;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Reunion Form</h1>
+        <p>Time to rekindle some good ol' memories! See you soon!</p>
+        <hr>
+        <p><strong>Date:</strong> 28-11-2024 | <strong>Time:</strong> 6pm onwards | <strong>Address:</strong> Our garage</p>
+        <form>
+            <label>Would you like to join us? <span>*</span></label>
+            <div>
+                <input type="radio" id="yes" name="join" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="join">
+                <label for="no">No</label>
+            </div>
+            
+            <label for="name">Name <span>*</span></label>
+            <div>
+                <input type="text" id="first-name" placeholder="First" required>
+                <input type="text" id="last-name" placeholder="Last">
+            </div>
+
+            <label for="phone">Phone <span>*</span></label>
+            <input type="tel" id="phone" required>
+
+            <label>Your Meal Preference <span>*</span></label>
+            <div>
+                <input type="radio" id="veg" name="meal" required>
+                <label for="veg">Vegetarian</label>
+                <input type="radio" id="non-veg" name="meal">
+                <label for="non-veg">Non-Vegetarian</label>
+            </div>
+
+            <label>What kind of games are you interested in?</label>
+            <div>
+                <input type="checkbox" id="indoor">
+                <label for="indoor">Indoor</label>
+                <input type="checkbox" id="board">
+                <label for="board">Board</label>
+                <input type="checkbox" id="ball-games">
+                <label for="ball-games">Ball games</label>
+                <input type="checkbox" id="outdoor">
+                <label for="outdoor">Outdoor</label>
+            </div>
+
+            <label for="questions">Do you have any questions?</label>
+            <textarea id="questions" rows="3"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
